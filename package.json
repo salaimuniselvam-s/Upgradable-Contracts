@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx hardhat test",
+    "deployProxy": "npx hardhat run scripts/deployProxy.js --network goerli",
+    "deployV1": "npx hardhat run scripts/deploysmsV1.js --network goerli",
+    "setProxyAdmin": "npx hardhat run scripts/setProxyAdmin.js --network goerli",
+    "setImplementation": "npx hardhat run scripts/setSmsV1asImplementation.js --network goerli",
+    "validateImplementation": "npx hardhat run scripts/validateProxyImplementation.js --network goerli"
   },
   "keywords": [],
   "author": "",

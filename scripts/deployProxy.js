@@ -17,6 +17,12 @@ async function main() {
   await proxyAdmin.deployed();
   console.log(`ProxyAdmin is Deployed At ${proxyAdmin.address}`);
   appendAddress({ key: "ProxyAdmin", value: proxyAdmin.address });
+
+  const network = await hre.ethers.provider.getNetwork();
+  if (network.chainId == 5) {
+    appendAddress({ key: "ProxyGoerli", value: proxy.address });
+    appendAddress({ key: "ProxyAdminGoerli", value: proxyAdmin.address });
+  }
 }
 
 main().catch((error) => {

@@ -24,6 +24,7 @@ module.exports = {
       url: InfuraAPIkeyGoerli, //from infura
       accounts: [deployerWalletPrivateKey], //from metamask
       gas: 10000000,
+      chainId: 5,
     },
   },
   etherscan: {

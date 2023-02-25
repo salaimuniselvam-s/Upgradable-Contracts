@@ -67,48 +67,19 @@ contract Proxy {
     }
 
     // User interface //
-    function _delegate(address _implementation) internal virtual {
+    function _delegate(address _impl) internal virtual {
         assembly {
-            // Copy msg.data. We take full control of memory in this inline assembly
-            // block because it will not return to Solidity code. We overwrite the
-            // Solidity scratch pad at memory position 0.
-
-            // calldatacopy(t, f, s) - copy s bytes from calldata at position f to mem at position t
-            // calldatasize() - size of call data in bytes
-            calldatacopy(0, 0, calldatasize())
-
-            // Call the implementation.
-            // out and outsize are 0 because we don't know the size yet.
-
-            // delegatecall(g, a, in, insize, out, outsize) -
-            // - call contract at address a
-            // - with input mem[in…(in+insize))
-            // - providing g gas
-            // - and output area mem[out…(out+outsize))
-            // - returning 0 on error (eg. out of gas) and 1 on success
-            let result := delegatecall(
-                gas(),
-                _implementation,
-                0,
-                calldatasize(),
-                0,
-                0
-            )
-
-            // Copy the returned data.
-            // returndatacopy(t, f, s) - copy s bytes from returndata at position f to mem at position t
-            // returndatasize() - size of the last returndata
-            returndatacopy(0, 0, returndatasize())
-
+            let ptr := mload(0x40)
+            calldatacopy(ptr, 0, calldatasize())
+            let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)
+            let size := returndatasize()
+            returndatacopy(ptr, 0, size)
             switch result
-            // delegatecall returns 0 on error.
             case 0 {
-                // revert(p, s) - end execution, revert state changes, return data mem[p…(p+s))
-                revert(0, returndatasize())
+                revert(ptr, size)
             }
             default {
-                // return(p, s) - end execution, return data mem[p…(p+s))
-                return(0, returndatasize())
+                return(ptr, size)
             }
         }
     }
