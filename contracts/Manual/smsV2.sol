@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.12;
 
-contract smsv2 {
+contract smsV2 {
     mapping(address => uint256) private _balances;
 
     mapping(address => mapping(address => uint256)) private _allowances;
@@ -16,6 +16,13 @@ contract smsv2 {
     event Mint(address indexed to, uint256 amount);
     event Burn(address indexed to, uint256 amount);
     event Transfer(address indexed from, address indexed to, uint256 value);
+
+    constructor(string memory name_, string memory symbol_) {
+        _name = name_;
+        _symbol = symbol_;
+        _totalSupply = 1000000;
+        _balances[msg.sender] = _totalSupply;
+    }
 
     function name() public view returns (string memory) {
         return _name;

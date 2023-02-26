@@ -1,16 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.12;
 
-contract smsV3 {
-    uint256 private _totalSupply;
-    bool internal locked;
-    string private _name;
-    address public owner;
-    string private _symbol;
-
+contract smsv3 {
     mapping(address => uint256) private _balances;
 
     mapping(address => mapping(address => uint256)) private _allowances;
+    uint256 private _totalSupply;
+    string private _name;
+    string private _symbol;
+    bool internal locked;
+    address public owner;
 
     event Approval(
         address indexed _owner,
@@ -31,14 +30,6 @@ contract smsV3 {
     modifier onlyOwner() {
         require(msg.sender == owner, "Not owner");
         _;
-    }
-
-    constructor(string memory name_, string memory symbol_) {
-        _name = name_;
-        _symbol = symbol_;
-        _totalSupply = 1000000;
-        owner = msg.sender;
-        _balances[msg.sender] = _totalSupply;
     }
 
     function name() public view returns (string memory) {

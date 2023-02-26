@@ -1,2 +1,16 @@
-"ProxyGoerli": "0xaD010b0E6e74Ee48840Fe89990C833220BC4eFa5",
-    "ProxyAdminGoerli": "0x15A00107709b3F41759aD54E60FBAF5DF0518bd8",
+Things Learned
+
+1. delegate Call & How storage Works in delegate call
+2. Transparent Proxy Pattern
+3. Static Call
+4. return Data from fallback in contract
+5. little bit assembly
+
+Proxy Admin Address : 0x5f801e0B849Fd0798B00C66A57809D8626050984
+Proxy Address: 0x327F59af0e01eC33967de3e2C1d8623d96ae92a6
+v1Imp: 0xCD36FbB238114E104B9A413bF7e768FABF029CF1
+v2Imp: 0xe521b33E9bccb53f7c9504702cB259C17A1577be
+v3Imp: 0x242D8746edaad2CaA23Fd465C48518D3c286f266
+
+
+to Verify: hh verify --contract contracts/smsv3.sol  --network goerli 0x242D8746edaad2CaA23Fd465C48518D3c286f266

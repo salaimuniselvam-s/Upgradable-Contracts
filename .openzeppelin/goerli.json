@@ -1,0 +1,249 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x5f801e0B849Fd0798B00C66A57809D8626050984",
+    "txHash": "0x812e78c5bc1f9f4f0ecbe311ce47ecacd704a3a888a4a37c00ba1b1fc45f51ff"
+  },
+  "proxies": [
+    {
+      "address": "0x327F59af0e01eC33967de3e2C1d8623d96ae92a6",
+      "txHash": "0xa8110510a01dceba99f2af235470e054f01b05442b2c17b8d730bca5dd6a786c",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "5f1ef012295ba972ce99265acf238cc650a0a8358b20f5a7117c2beefa7d1045": {
+      "address": "0xCD36FbB238114E104B9A413bF7e768FABF029CF1",
+      "txHash": "0x8727d75a3e266190c96fcb56b47c4b0fbbecef372d43fe07afee03e6865b4529",
+      "layout": {
+        "solcVersion": "0.8.12",
+        "storage": [
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "smsv1",
+            "src": "contracts\\smsv1.sol:5"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "smsv1",
+            "src": "contracts\\smsv1.sol:7"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "smsv1",
+            "src": "contracts\\smsv1.sol:8"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_string_storage",
+            "contract": "smsv1",
+            "src": "contracts\\smsv1.sol:9"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_string_storage",
+            "contract": "smsv1",
+            "src": "contracts\\smsv1.sol:10"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "d934e8b9db41460d9b775d875a450bf53a15702cb28054b50a9ce54baa04f318": {
+      "address": "0xe521b33E9bccb53f7c9504702cB259C17A1577be",
+      "txHash": "0xb0d0c4b3b88e04a3f24e1a68feb9d0981a24821a1eb1d294f1073052421be0ae",
+      "layout": {
+        "solcVersion": "0.8.12",
+        "storage": [
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "smsv2",
+            "src": "contracts\\smsv2.sol:5"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "smsv2",
+            "src": "contracts\\smsv2.sol:7"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "smsv2",
+            "src": "contracts\\smsv2.sol:8"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_string_storage",
+            "contract": "smsv2",
+            "src": "contracts\\smsv2.sol:9"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_string_storage",
+            "contract": "smsv2",
+            "src": "contracts\\smsv2.sol:10"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    },
+    "7c7bc1ab16769ab7ca6a2ac487ff6b90694623a7fab3d153f1346b3e93577792": {
+      "address": "0x242D8746edaad2CaA23Fd465C48518D3c286f266",
+      "txHash": "0xc3a5d184b28fa86b31f4af47134e2c8065f03aa3dab598ea8e2ddf2b9d5f7b04",
+      "layout": {
+        "solcVersion": "0.8.12",
+        "storage": [
+          {
+            "label": "_balances",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "smsv3",
+            "src": "contracts\\smsv3.sol:5"
+          },
+          {
+            "label": "_allowances",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "smsv3",
+            "src": "contracts\\smsv3.sol:7"
+          },
+          {
+            "label": "_totalSupply",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "smsv3",
+            "src": "contracts\\smsv3.sol:8"
+          },
+          {
+            "label": "_name",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_string_storage",
+            "contract": "smsv3",
+            "src": "contracts\\smsv3.sol:9"
+          },
+          {
+            "label": "_symbol",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_string_storage",
+            "contract": "smsv3",
+            "src": "contracts\\smsv3.sol:10"
+          },
+          {
+            "label": "locked",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_bool",
+            "contract": "smsv3",
+            "src": "contracts\\smsv3.sol:11"
+          },
+          {
+            "label": "owner",
+            "offset": 1,
+            "slot": "5",
+            "type": "t_address",
+            "contract": "smsv3",
+            "src": "contracts\\smsv3.sol:12"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,12 +11,16 @@
     "setImplementation": "npx hardhat run scripts/Manual/setImplementation.js --network goerli",
     "validateImplementation": "npx hardhat run scripts/Manual/validateProxyImplementation.js --network goerli",
     "deployV2": "npx hardhat run scripts/Manual/deploysmsV2.js --network goerli",
-    "deployV3": "npx hardhat run scripts/Manual/deploysmsV3.js --network goerli"
+    "deployV3": "npx hardhat run scripts/Manual/deploysmsV3.js --network goerli",
+    "upgradeV1": "npx hardhat run scripts/deployV1.js --network goerli",
+    "upgradeV2": "npx hardhat run scripts/upgradeV2.js --network goerli",
+    "upgradeV3": "npx hardhat run scripts/upgradeV3.js --network goerli"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@openzeppelin/hardhat-upgrades": "^1.22.1",
     "hardhat": "^2.12.7"
   },
   "devDependencies": {
