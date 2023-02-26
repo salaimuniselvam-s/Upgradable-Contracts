@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test",
-    "deployProxy": "npx hardhat run scripts/deployProxy.js --network goerli",
-    "deployV1": "npx hardhat run scripts/deploysmsV1.js --network goerli",
-    "setProxyAdmin": "npx hardhat run scripts/setProxyAdmin.js --network goerli",
-    "setImplementation": "npx hardhat run scripts/setSmsV1asImplementation.js --network goerli",
-    "validateImplementation": "npx hardhat run scripts/validateProxyImplementation.js --network goerli"
+    "deployProxy": "npx hardhat run scripts/Manual/deployProxy.js --network goerli",
+    "deployV1": "npx hardhat run scripts/Manual/deploysmsV1.js --network goerli",
+    "setProxyAdmin": "npx hardhat run scripts/Manual/setProxyAdmin.js --network goerli",
+    "setImplementation": "npx hardhat run scripts/Manual/setImplementation.js --network goerli",
+    "validateImplementation": "npx hardhat run scripts/Manual/validateProxyImplementation.js --network goerli",
+    "deployV2": "npx hardhat run scripts/Manual/deploysmsV2.js --network goerli",
+    "deployV3": "npx hardhat run scripts/Manual/deploysmsV3.js --network goerli"
   },
   "keywords": [],
   "author": "",

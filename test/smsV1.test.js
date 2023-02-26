@@ -6,14 +6,14 @@ const {
   TOTAL_SUPPLY,
 } = require("../constants");
 
-let admin;
+let owner;
 let user;
 
 let smsV1;
 
 describe("Sms Version1 Contract", function () {
   beforeEach(async function () {
-    [admin, user] = await ethers.getSigners();
+    [owner, user] = await ethers.getSigners();
 
     const SmsV1 = await hre.ethers.getContractFactory("smsV1");
     smsV1 = await SmsV1.deploy("SMS", "sms");
@@ -34,7 +34,7 @@ describe("Sms Version1 Contract", function () {
   });
 
   it("Balance of Validation", async function () {
-    let balance = await smsV1.balanceOf(admin.address);
+    let balance = await smsV1.balanceOf(owner.address);
     expect(balance).equal(TOTAL_SUPPLY);
   });
 });

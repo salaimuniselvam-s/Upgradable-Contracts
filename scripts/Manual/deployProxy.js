@@ -1,5 +1,5 @@
 const hre = require("hardhat");
-const appendAddress = require("../appendAddress");
+const appendAddress = require("../../appendAddress");
 
 async function main() {
   //Deploy Proxy

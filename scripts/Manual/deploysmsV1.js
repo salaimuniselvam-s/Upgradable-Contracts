@@ -1,6 +1,6 @@
 const hre = require("hardhat");
-const appendAddress = require("../appendAddress");
-const { ERC_CONTRACT_NAME, ERC_TOKEN_NAME } = require("../constants");
+const appendAddress = require("../../appendAddress");
+const { ERC_CONTRACT_NAME, ERC_TOKEN_NAME } = require("../../constants");
 
 async function main() {
   //Deploying Sms Version 1
